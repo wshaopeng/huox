@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        ul {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .text_center{
+            text-align: center;
+        }
+        .text_center a{
+            font-weight: bold;
+            font-size: 30px;
+            color: red;
+            text-decoration: none;
+        }
+        .light_box,.light_bg{
+            display: none;
+        }
+        .text_justify{
+            line-height: 30px;
+            font-size: 24px;
+            text-align: center;
+            color: #c75f05;
+        }
+        .light_bg{
+            background-color: #36ffc3;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index:2;
+        }
+        .light_box{
+            background: #fff;
+            border-top: 10px solid red;
+            border-bottom: 10px solid green;
+            border-left: 10px solid yellow;
+            border-right: 10px solid blue;
+            width: 50%;
+            padding: 1em;
+            position: absolute;
+            left:50%;
+            top:10%;
+            margin-left: -25%;
+            z-index: 3;
+        }
+        .close_box{
+            background: #c75f05;
+            color: #fff;
+            font: bold 2em/1 Arial;
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            top: 0;
+            z-index: 4;
+        }
+        .light_box h3{
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+        #nav{
+            padding-top: 20px;
+            width: 1199px;
+            margin: 0 auto;
+        }
+        #banner{
+            padding-top: 10px;
+            width: 1000px;
+            margin: 0 auto;
+        }
+        #box {
+            padding-top: 20px;
+            width: 1000px;
+            height: 640px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .redred{
+            color: red;
+        }
+        #title{
+            background-color: #fb7400;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 28px;
+            width: 1000px;
+            margin: 0 auto;
+            border: 2px solid #fb7400;
+        }
+        #tabs ul {
+            text-align: center;
+            width: 707px;
+            height: 50px;
+            /*border-left: green solid 1px;*/
+            border-bottom: #fb7400 solid 3px;
+        }
+        #tabs ul li {
+            width: 150px;
+            float: left;
+            border-top: #fb7400 solid 1px;
+            border-right: #fb7400 solid 1px;
+            border-left: #fb7400 solid 1px;
+            margin-right: 3px;
+            background-color: rgba(209, 207, 219, 0.7);
+        }
+        #tabs ul li a {
+            display: block;
+            padding: 0 12px;
+            line-height: 48px;
+            border: #fbfff9 solid 1px;
+            border-bottom: none;
+            color: #fb7400;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #tabs ul li .current {
+            border-bottom: white solid 3px;
+            background-color: white;
+        }
+        #content {
+            border: #fb7400 solid 3px;
+            border-top: none;
+            float: left;
+       }
+        #content > div {
+            display: none;
+        }
+        #content > div:nth-child(1) {
+            display: block;
+        }
+        #right_box {
+            height: 100%;
+            background-color: #eee;
+            padding-left: 30px;
+            float: left;
+            padding-right: 20px;
+        }
+        .img_ad{
+            margin-top: 80px;
+          margin-left: 20px;
+        }
+        #left_box {
+            clear: both;
+            background-color: #ddd;
+            padding-left: 30px;
+            float: left;
+            border-right: 1px solid greenyellow;
+        }
+
+        #left_box > h3 {
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+        .fristH3 {
+            width: 270px;
+            line-height: 50px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        .xuanzhe {
+            font-size: 14px;
+            width: 350px;
+            border-bottom: 1px dashed green;
+            padding-bottom: 20px;
+        }
+        .xuanzhe input {
+
+            line-height: 50px;
+        }
+        #jisuan{
+
+            border-top: 1px dashed green;
+            margin-top: 5px;
+        }
+        .jisuan2{
+            display: none;
+        }
+        .inpstype {
+            margin-bottom: 8px;
+            margin-top: 10px;
+            height: 20px;
+            width: 100px;
+        }
+        .select {
+            line-height: 50px;
+            height: 50px;
+        }
+        #qishu {
+            padding-top: 20px;
+            border-bottom: 1px dashed green;
+            padding-bottom: 10px;
+        }
+        #daikuanll {
+            margin-top: 5px;
+            border-top: 1px dashed green;
+            border-bottom: 1px dashed green;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        .dkllselectinp {
+            margin-left: 50px;
+            height: 20px;
+            width: 60px;
+            margin-top: 10px;
+        }
+        #huankuanfs {
+            margin-top: 5px;
+            border-top: 1px dashed green;
+            border-bottom: 1px dashed green;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        #but {
+            margin-top: 5px;
+            border-top: 1px dashed green;
+        }
+        .star, .retext {
+            border-radius: 6px;
+            height: 35px;
+            width: 80px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+
+        }
+        .star {
+            background-color: darkorange;
+            margin-left: 50px;
+        }
+        .retext {
+            margin-left: 10px;
+            background-color: cadetblue;
+        }
+        .result {
+            height: 20px;
+            width: 150px;
+        }
+        #list_other {
+            float: left;
+            padding-left: 20px;
+            border: red solid 1px;
+            position: absolute;
+            left: 710px;
+            top: auto;
+        }
+        #list_other table {
+            border-collapse: collapse;
+            /*border: 1px solid saddlebrown;*/
+            font-size: 14px;
+            height: 100px;
+        }
+        #list_other thead tr, #list_other thead th {
+            border: 1px solid saddlebrown;
+        }
+        #list_other tbody tr, #list_other tbody td {
+            border: 1px solid saddlebrown;
+        }
+        #list_other table tr td:nth-child(1) {
+
+            width: 100px;
+        }
+        #list_other table tr td:nth-child(2) {
+            width: 50px;
+        }
+        #list_other table tr td:nth-child(3) {
+            width: 50px;
+        }
+        .light_box h3{
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="common.js"></script>
+    <script src="ceshi.js"></script>
+    <!--<script>
+        var price1 = [["6.80", "6.55", "6.15", "5.90"], ["4.70", "4.50", "4.25", "4.00"], ["4.80", "4.60", "4.35", "4.10"]];
+        $(function () {
+            $(".open_light_window").on("click",function(e){
+                e.preventDefault()
+
+                $(".light_bg").fadeIn();
+
+                $(".light_box").slideDown();
+            })
+            $(".close_box").on("click",function(e){
+                e.preventDefault();
+
+                $(".light_bg").fadeOut();
+
+                $(".light_box").slideUp();
+            })
+            $(".open_light_window").trigger("click");
+            setTimeout(function(){
+                $(".close_box").trigger("click")
+            },5000)
+            //先出现默认利率
+            dkllresult();
+            //页面切换
+            $("#tabs ul").find("li").each(function (index) {
+                $(this).on("mouseover", function () {
+
+                    $(this).siblings().find("a").removeClass("current");
+
+                    $(this).find("a").addClass("current");
+
+                    $("#content>div").eq(index).fadeIn().siblings().stop().hide();
+                });
+            });
+            //贷款利率计算
+            var dkll = $(".xuanzhe input[name=tt]");
+            var seclet = $("#daikuanll select[name=dkllseclet]");
+            //1）贷款方式：商业、公积金、组合
+            dkll.on("change", function () {
+                dkllresult()
+            });
+            //2）贷款期数：
+            seclet.on("change", function () {
+                dkllresult()
+            });
+            //开始计算按钮
+            $("#but .star").on("click", function () {
+                var fngshi=$("#jisuan input[name=fs]:checked").val();
+
+                var input = $("#jisuan input[type=number]").val();
+                if(input.length == 0){
+                    return;
+                }
+
+                    switch (fngshi){
+                        case "0":
+                            resultdkll();
+                            break;
+                        case "1":
+                            resultdklltwo();
+                            break;
+                    }
+
+
+                return false;
+            });
+            //选择方式
+            $("#jisuan .checktyp").on("click",function(){
+                $(this).siblings("div").slideUp();
+                $(this).next().next().slideDown();
+            });
+        });
+        //贷款利率函数
+        function dkllresult() {
+            var num1 = $(".xuanzhe input[name=tt]:checked").val();
+            var num2 = $("#daikuanll select[name=dkllseclet]").find("option:selected").val();
+            $("#daikuanll input[name=dkll]").val(price1[num1][num2]);
+        }
+        //计算贷款利率1
+        function resultdkll() {
+            //获取单价
+            var danjia = $(".jisuan1 input:first").val();
+            //获取面积
+            var mianji = $(".jisuan1 input:last").val();
+            //按揭成数
+            var anjiechengshu = $(".select select:first option:selected").val();//按揭年数
+            //按揭年数
+            var anjienianshu = $("#qishu select:first option:selected").val();
+            //贷款利率
+            var daikuanlilv = $("#daikuanll input:first").val();
+            /*&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;一下是计算各金额-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/
+            var daizong=danjia * mianji * anjiechengshu;
+            //月利息
+            var yuelx=(daikuanlilv/12)/100;
+            //〔贷款本金×月利率×（1＋月利率）＾还款月数〕÷〔（1＋月利率）＾还款月数－1〕
+            var yjhk=(daizong*yuelx*(Math.pow((1+yuelx),anjienianshu)))/(Math.pow((1+yuelx),anjienianshu)-1);
+            //房款总额
+            $("#right_box input[name=first]").val(parseInt(danjia * mianji));
+            //贷款总额
+            $("#right_box input[name=second]").val(danjia * mianji * anjiechengshu);
+            //还款总额
+            $("#right_box input[name=three]").val(yjhk*anjienianshu)
+            //支付利息
+            $("#right_box input[name=four]").val(yjhk*anjienianshu-daizong)
+            //首期付款
+            $("#right_box input[name=five]").val(danjia * mianji - daizong)
+            //贷款月数
+            $("#right_box input[name=six]").val(anjienianshu)
+            //月均还款
+            $("#right_box input[name=seven]").val((daizong*yuelx*(Math.pow(1+yuelx),anjienianshu))/((Math.pow(1+yuelx),anjienianshu)-1))
+
+        }
+        //计算贷款利率2
+        function resultdklltwo(){
+            //获取贷款总额
+            var dkze = $(".jisuan2 input:first").val()
+            //按揭成数
+            var anjiechengshu = $(".select select:first option:selected").val();//按揭年数
+            //按揭年数
+            var anjienianshu = $("#qishu select:first option:selected").val();
+            //贷款利率
+            var daikuanlilv = $("#daikuanll input:first").val();
+            /*&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;一下是计算各金额-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/
+            var yuelx=(daikuanlilv/12)/100;
+            var yjhk=(dkze*yuelx*(Math.pow(1+yuelx),anjienianshu))/((Math.pow(1+yuelx),anjienianshu)-1);
+
+
+            //房款总额
+            $("#right_box input[name=first]").val("你猜");
+            //贷款总额
+            $("#right_box input[name=second]").val(dkze);
+            //还款总额
+            $("#right_box input[name=three]").val(yjhk*anjienianshu)
+            //支付利息
+            $("#right_box input[name=four]").val(yjhk*anjienianshu-dkze)
+            //首期付款
+            $("#right_box input[name=five]").val("none")
+            //贷款月数
+            $("#right_box input[name=six]").val(anjienianshu)
+            //月均还款
+            $("#right_box input[name=seven]").val((dkze*yuelx*(Math.pow(1+yuelx),anjienianshu))/((Math.pow(1+yuelx),anjienianshu)-1))
+
+        }
+    </script>-->
+</head>
+<body>
+<!--<div class="text_center">
+    <a href="#" class="open_light_window"><marquee>毕业设计</marquee></a>
+</div>
+<div class="light_box">
+    <a href="#" class="close_box">X</a>
+    <h3>致谢导语</h3>
+    <p class="text_justify">
+        感谢敬爱的<strong>安老师、杜老师</strong>！
+        对我的指导<br>
+        感谢大学中教导我给与我帮助的<strong>老师！</strong><strong>同学!</strong><strong>家人！</strong><strong>朋友！</strong>重要的事情说三遍！！！<br>
+        感谢！感谢！感谢！
+    </p>
+</div>-->
+<div class="light_bg"></div>
+<div id="nav"><img src="images/nav2.png"></div>
+<div id="banner"><img src="images/banner.jpg" alt="banner"/></div>
+<div id="title">购房贷款计算器</div>
+<div id="box">
+    <div id="tabs">
+        <ul>
+            <li><a href="#" class="current">贷款公积金</a></li>
+            <li><a href="#">公积金计算器</a></li>
+            <li><a href="#">提前还款计算器</a></li>
+            <li><a href="#">税费计算器</a></li>
+        </ul>
+        <div id="content" style="background-color: #ccc;">
+            <div>
+                <form>
+                    <div id="left_box">
+                        <div class="xuanzhe">
+                            <h3 class="fristH3">请你填写：</h3>
+                            贷款类别:
+                            <input type="radio" name="tt" value="0" class="put" checked="checked">商业贷款
+                            <input type="radio" name="tt" value="1" class="put">公积金贷款
+                            <input type="radio" name="tt" value="2" class="put">组合型贷款
+                        </div>
+                        <div id="jisuan">
+                            <h3 class="fristH3">计算方式</h3>
+                            <input type="radio" name="fs" checked="checked" class="checktyp" value="0">根据单位、面积计算</br>
+                            <div class="jisuan1">
+
+                                单价：<input type="number" class="inpstype">元/平米<span class="error redred">*</span></br>
+                                面积：<input type="number" class="inpstype">平方米 <span class="error redred">*</span></br>
+                                <div class="select">
+                                    按揭成数：
+                                    <select class="redred">
+                                        <option value="0.9">9成</option>
+                                        <option value="0.8">8成</option>
+                                        <option value="0.7" selected="selected">7成</option>
+                                        <option value="0.6">6成</option>
+                                        <option value="0.5">5成</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="radio" name="fs" class="checktyp" value="1">根据贷款总额计算</br>
+                            <div class="jisuan2">
+                                贷款总额：<input type="number" class="inpstype redred">元</br>
+                            </div>
+                        </div>
+                        <div id="qishu">
+                            按揭年数：<select class="redred" >
+                            <option value="240">20年(240期)</option>
+                            <option value="300">25年(300期)</option>
+                            <option value="360">30年(360期)</option>
+                        </select>
+                        </div>
+                        <div id="daikuanll">
+                            贷款利率：
+                            <select name="dkllseclet" class="dkllselect redred">
+                                <option selected="selected" value="0">16-4-8</option>
+                                <option value="1">15-6-8</option>
+                                <option value="2">12-5-8</option>
+                            </select><br>
+                            <input type="text" value="6.80" name="dkll" class="dkllselectinp redred" readonly="readonly">%
+                        </div>
+                        <div id="huankuanfs">
+                            还款方式：
+                            <input type="radio" name="rr" class="put" checked="checked">等额本息
+                            <input type="radio" name="rr" class="put">等额本金
+                        </div>
+                        <div id="but">
+                            <input type="button" value="开始计算" class="star">
+                            <input type="reset" value="重新填写" class="retext">
+                        </div>
+                    </div>
+                    <div id="right_box">
+                        <h3 class="fristH3">查看结果</h3>
+                        房款总额：<input name="first" type="text" value="" class="result">元<br><br>
+                        贷款总额：<input name="second" type="text" value="" class="result">元<br><br>
+                        还款总额：<input name="three" type="text" value="" class="result">元<br><br>
+                        支付利息：<input name="four" type="text" value="" class="result">元<br><br>
+                        首期付款：<input name="five" type="text" value="" class="result">元<br><br>
+                        贷款月数：<input name="six" type="text" value="" class="result"><br><br>
+                        月均还款：<input name="seven" type="text" value="" class="result">元<br><br>
+                        <div class="img_ad"><img src="images/ad.jpg"></div>
+                    </div>
+                </form>
+            </div>
+
+            <!--<div>
+                <span>点击链接到静态页面</span>
+                <a href="../oshine/oshine.html"><strong>Html+css</strong></a>
+            </div>
+            <div>
+                <span>点击链接到响应式网页</span>
+                <a href="../awesome/awesome.html"><strong>Bootstrap</strong></a>
+            </div>
+            <div>
+                <span>点击链接前端购物系统</span>
+                <a href="../sportstore/sport.html"><strong>Anjularjs</strong></a>
+            </div>-->
+        </div>
+    </div>
+    <div id="list_other">
+        <h3 class="fristH3">房贷利率</h3>
+        <table>
+            公积金利率(单位%)
+            <thead>
+            <tr>
+                <th>年限</th>
+                <th>1-5年</th>
+                <th>5-30年</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>12-6-8</td>
+                <td>4.20</td>
+                <td>4.70</td>
+            </tr>
+            <tr>
+                <td>12-7-6</td>
+                <td>4.00</td>
+                <td>4.50</td>
+            </tr>
+            <tr>
+                <td>14-11-22</td>
+                <td>3.75</td>
+                <td>4.25</td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <table>
+            商业贷款利率(单位%)
+            <thead>
+            <tr>
+                <th>年限</th>
+                <th>1-5年</th>
+                <th>5-30年</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>12-6-8</td>
+                <td>6.65</td>
+                <td>6.80</td>
+            </tr>
+            <tr>
+                <td>12-7-6</td>
+                <td>6.40</td>
+                <td>6.55</td>
+            </tr>
+            <tr>
+                <td>14-11-22</td>
+                <td>6.00</td>
+                <td>6.15</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

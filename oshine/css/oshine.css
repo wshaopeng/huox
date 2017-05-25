@@ -1,0 +1,551 @@
+@charset "utf-8";
+@import url("icomoon.css");
+@import url("font-awesome.min.css");
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border: none;
+}
+body {
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+}
+.icon {
+	font-family: 'icomoon';
+}
+.clear {
+	clear: both;
+}
+.fa-icon {
+	font-family: 'FontAwesome';
+}
+header {
+	width: 95%;
+	height: 98px;
+	position: fixed;
+	padding: 0 2.5%;
+	z-index: 100;
+}
+header .head_left {
+	width: 149px;
+	height: 98px;
+	background-image: url(../images/oshin-black-logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+}
+.head_inner ul {
+	float: left;
+}
+.head_inner {
+	width: 952px;
+	margin: 0 auto;
+}
+.head_inner li {
+	float: left;
+	letter-spacing: 2px;
+	margin-right: 41px;
+}
+.head_inner li span{
+	color:#e0a240;}
+.head_inner li:nth-child(1) {
+	margin-left: 44px;
+}
+.head_inner a {
+	display: block;
+	line-height: 98px;
+	color: #333333;
+	font-size: 12PX;
+}
+.head_right {
+	float: right;
+}
+.head_right li {
+	float: left;
+	margin-left: 22px;
+}
+.head_right li:nth-child(1) {
+	margin-left: 34px;
+}
+.head_right li a {
+	font-size: 24px;
+	color: #333333;
+	line-height: 98px;
+}
+#banner {
+	height: 823px;
+	text-align: center;
+	background: url(../images/oshin-slide-1.jpg) no-repeat;
+	background-position: center;
+	position:relative;
+	
+}
+#banner h3 {
+	
+	font-size: 18px;
+	line-height: 81px;
+	height: 81px;
+	
+	letter-spacing: 7px;
+	word-spacing: 19px;
+	font-weight: normal;
+	color: #222222;
+	position:absolute;
+	left:40%;
+	top:150px;
+	animation:making 1s ease;
+	
+}
+@keyframes making{
+	0%{
+		left:40%;
+		top:150px;}
+	50%{
+		left:0%;
+		top:150px;
+		}
+	100%{
+		left:40%;
+		top:150px;}
+	}
+#banner h2 {
+	width: 350px;
+	font-size: 45px;
+	border: 7px #000000 solid;
+	padding: 34px 61px 34px 53px;
+	position:absolute;
+	left:35%;
+	top:250px;
+	animation: sty 1s ease;
+	
+}
+@keyframes sty{
+	0%{
+		left:35%;
+		top:250px;}
+	50%{
+		left:35%;
+		top:0;
+		}
+	100%{
+		left:35%;
+		top:250px;}
+		}
+#banner p {
+	font-size: 28px;
+	position:absolute;
+	left:42%;
+	top:430px;
+		font-style:italic;
+	min-width:300px;	
+	
+	animation:best 1s ease;
+
+}
+@keyframes best{
+	0%{
+		right:58%;
+		top:430px;
+		}
+	50%{
+		right:0%;
+		top:430px;
+		}
+	100%{
+		right:58%;
+		top:430px;
+		}	
+		}
+#oshine {
+	text-align: center;
+	height: 828px;
+}
+#oshine h3 {
+	padding-top: 61px;
+	line-height: 101px;
+}
+#oshine .a {
+	line-height: 36px;
+}
+#oshine .comes {
+	line-height: 32px;
+}
+.zheng {
+	height: 85px;
+	background: url(../images/zfx_bj_03.jpg) no-repeat center;
+}
+.th_pic {
+	margin-top: 97px;
+}
+#tubiao li {
+	float: left;
+	width: 25%;
+	height: 246px;
+	text-align: center;
+}
+#tubiao li:nth-child(1) {
+	background-color: #f2f5f8;
+}
+#tubiao li:nth-child(2) {
+	background-color: #edf0f2;
+}
+#tubiao li:nth-child(3) {
+	background-color: #f2f5f8;
+}
+#tubiao li:nth-child(4) {
+	background-color: #edf0f2;
+}
+#tubiao .icon {
+	font-size: 60px;
+	margin-top: 63px;
+	margin-bottom: 20px;
+}
+#tubiao .he {
+	transition: all 1s;
+}
+#tubiao li:hover {
+	background-color: #7d7f80;
+	
+}
+#tubiao li:hover .he {
+	transform: translate(0, -15px);
+}
+#phone {
+	height: 697px;
+	padding: 90px 0px;
+}
+.phone_left {
+	width: 405px;
+	height: 697px;
+	padding-left: 60px;
+	float: left;
+}
+.phone_mid .shouji {
+	float:left;
+	
+}
+.phone_mid {
+	width:20%;
+	margin:0 auto;
+	
+}
+.phone_right {
+	float: right;
+	
+}
+.phone_left_top {
+	height: 177px;
+	padding-top: 20px;
+}
+#phone .icon {
+	font-size: 30px;
+	color: #e7ad4e;
+	line-height: 55px;
+}
+#phone .icon {
+	float: left;
+}
+#phone .phone_mod {
+	width: 344px;
+	float: right;
+}
+.phone_mod h5 {
+	line-height: 55px;
+}
+.phone_mod p {
+	line-height: 26px;
+	width: 275px;
+}
+#book {
+	height: 400px;
+	background: url(../images/bjfujian_06.jpg) no-repeat fixed center;
+	background-size: cover;
+}
+#work {
+	height: 427px;
+	text-align: center;
+}
+#work h3 {
+	padding-top: 61px;
+	line-height: 101px;
+}
+#work .a {
+	line-height: 36px;
+}
+#work ul {
+	width: 650px;
+	margin: 0 auto;
+}
+#work ul li {
+	float: left;
+	line-height: 140px;
+	margin-right: 45px;
+}
+#work li:nth-child(1) {
+	margin-left: 44px;
+}
+#work li:nth-child(1) a {
+	padding: 15px 20px;
+	border: 1px #e0a240 solid;
+	
+}
+
+#work li:nth-child(1) span{
+	color:#e0a240;
+	}
+#work li a:hover{
+	color:#e0a240;
+	}
+#work li a {
+	color: #222222;
+	letter-spacing: 1px;
+}
+#pic {
+	width: 93%;
+	margin: 0 auto;
+}
+#pic .pic_top_left {
+	width: 30%;
+	margin-right: 5%;
+	float: left;
+	margin-bottom: 40px;
+	position: relative;
+}
+#pic img {
+	width: 100%;
+}
+#pic .pic_top_left:nth-child(3) {
+	margin-right: 0;
+}
+.same {
+	background-color: #1D1C1C;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	opacity: 0;
+	transition: all 1s;
+}
+.same h5 {
+	line-height: 40px;
+	margin-top: 80px;
+	color: #fff;
+}
+.same p {
+	font-size: 12px;
+	color: #fff;
+}
+.same:hover {
+	opacity: 0.8;
+}
+#view {
+	height: 550px;
+	text-align: center;
+}
+#view h5 {
+	padding: 18px 20px;
+	border: 2px #000000 solid;
+	display: inline-block;
+	margin-bottom: 90px;
+	color: #000;
+	font-size: 12px;
+	transition:all 1s;
+}
+#view h5:hover a{
+	
+	color:white;
+	}
+#view h5:hover {
+	background-color:#e0a240;
+	}
+#view h5 a{
+	
+	color: #000;}
+#view .bird {
+	height: 413px;
+	background-color: #f2f3f8;
+}
+.fa-twitter {
+	font-size: 80px;
+	text-align: center;
+	color: #dfdfdf;
+	padding-top: 80px;
+}
+.bird p {
+	line-height: 43px;
+	padding-top: 20px;
+	letter-spacing: 1px;
+	color: #5f627c;
+}
+.bird p span {
+	color: #e6a240;
+}
+.bird h6 {
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+#cli {
+	height: 334px;
+	text-align: center;
+}
+#cli h3 {
+	padding-top: 61px;
+	line-height: 101px;
+}
+#cli .a {
+	line-height: 36px;
+}
+#t_pic {
+	width: 100%;
+}
+.plup {
+	width: 48%;
+	float: left;
+	padding: 0 1%;
+	text-align: center;
+}
+.plup img {
+	width: 100%;
+	transition: all 1s;
+}
+.plup:hover img {
+	transform: scale(0.9, 0.9);
+}
+#touch {
+	height: 340px;
+	background-image: url(../images/bj_hei_08.jpg);
+	margin-top: 92px;
+	text-align: center;
+	color: white;
+	letter-spacing: 1px;
+}
+#touch h2 {
+	padding-top: 100px;
+}
+#touch p {
+	line-height: 80px;
+}
+#touch h4 {
+	display: inline-block;
+	color: #f0b452;
+	padding: 17px;
+	border: 1px #f0b452 solid;
+	transition:all 1s;
+}
+#touch h4:hover {
+	background-color: #f0b452;
+	color: white;
+}
+#footer .foot_top{
+	background-color: #f2f3f8;
+}
+#footer .foot_inner {
+	width:90%;
+	padding: 70px 5%;
+	
+}
+.foot_left {
+	width: 25%;
+	float: left;
+}
+.foot_oshine {
+	height: 80px;
+	background: url(../images/oshin-black-logo.png) no-repeat 60px 0;
+}
+.foot_left p {
+	line-height: 24px;
+	color: #919192;
+}
+.foot_icon ul {
+	height: 65px;
+	line-height: 95px;
+	padding-top: 30px;
+	
+}
+.foot_icon li {
+	float: left;
+	margin-right: 13px;
+	line-height: 30px;
+	width: 30px;
+	border: 1px #e0a549 solid;
+	border-radius: 30px;
+	text-align: center;
+	transition:all 1s;
+}
+.foot_icon li:hover{
+	background-color:#e0a549;}
+.foot_icon li:hover a{
+	color:white;}
+.foot_icon a {
+	font-size: 15px;
+	color: #e0a549;
+}
+.post{
+	margin-left:45px;}
+#footer h5{
+	font-size:18px;
+	line-height:21px;
+	padding-bottom:27px;}
+.post_pic{
+	float:left;
+	padding-right:10px;}
+.post p{
+	line-height:25px;
+	letter-spacing:1px;
+	font-size:16px;
+	padding-bottom:30px;}
+.links{
+	margin-left:45px;}
+.links li{
+	line-height:30px;
+	background:url(../images/fanzhehao_03.jpg) no-repeat 0 8px;
+	}
+.links li a{
+	color:#919192;
+	margin-left:20px;}
+.in{margin-left:45px;}
+.from{
+	margin-left:45px;}
+.from img{
+	width:29%;
+	margin-right:5%;
+	
+	}
+#footer .from img:nth-child(3n){
+	margin-right:0;}
+.foot_bot{
+	text-align:center;
+	line-height:70px;
+	color:#959595;
+	letter-spacing:1px;}
+.one_pic{
+	display:inline;
+	position:relative;}
+.same_t{
+	background-color: #1D1C1C;
+	width: 83%;
+	height:400%;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	top:-60px;
+	opacity:0;
+	transition: all 1s;
+}
+.same_t h4{
+	line-height:50px;
+	color:white;}
+.same_t:hover{
+	opacity:0.8;}

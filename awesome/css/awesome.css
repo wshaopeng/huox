@@ -1,0 +1,312 @@
+@charset "utf-8";
+/* CSS Document */
+h1,h2,h3,h4,h5,h6,ul,li {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border: none;
+}
+.icon {
+	font-family: 'FontAwesome';
+	font-size: 20px;}
+.clear {
+	clear: both;
+	}
+a:hover{
+	text-decoration:none;
+	}
+.header_top{
+	background-color:#1f272d;
+	height:36px;
+	
+	font-size:12px;
+	line-height:36px;
+}
+.header_top a,.header_top span{
+	color:#858687;}
+#header .row{
+	margin-left:0;
+	margin-right:0px;
+	}
+.head_contact a{
+	font-size:16px;
+	padding-right:6px;
+	}
+.head_icon li{
+	float:left;
+	width:20%;
+	line-height:36px;
+	}
+.head_icon li a{
+	display:block;
+	}
+.header_bot{
+	background-color:#283036;}
+.header_bot li{
+	float:left;
+	}
+.logo{
+	float:left;
+	}
+.nav_home{
+	float:right;
+	}
+.nav_home{
+	margin-right:40px;
+	}
+.nav_home a{
+	display:block;
+	line-height:80px;
+	padding:0 17px 0;
+	color:#ffffff;
+	}
+.nav_home a:hover{
+	background:url(../images/BJ_1.png) no-repeat top;
+	}
+.search{
+	float:right;
+	font-size:16px;
+	line-height:80px;
+	margin-right:25px;
+	color:#6f7173;
+	}
+.search:hover{
+	color:#8c8c8c;}
+.banner {
+	
+	position:relative;
+	background-color:#f04949;
+	padding:59px 0 50px;
+	color:#ffffff;
+}
+.mybanner{
+	width:72%;
+	margin:0 auto;
+	}
+.computer{
+	text-align:center;
+	}
+.computer img{
+	width:80%;
+	}
+.banner h1{
+	line-height:66px;
+	padding:99px 0 33px;
+	font-size:50px;
+	letter-spacing:1px;
+	
+	}
+.banner p{
+	line-height:24px;
+	padding-bottom:108px;
+	font-size:18px;
+	}
+.title{
+	text-align:center;
+	padding:82px 0;
+	}
+.title h2{
+	line-height:29px;
+	color:#f04949;
+	}
+.title p{
+	line-height:25px;
+	padding-top:38px;
+	}
+.recent h5{
+	font-size:24px;
+	line-height:35PX;
+	}
+
+.recent li{
+	float:left;
+	text-align:center;
+	border:1px #f04949 solid;
+	border-radius:4px;
+	}
+.recent ul li:nth-child(2){
+	border-left:none;
+	border-right:none;
+}
+.recent ul li:nth-child(3){
+	border-right:none;
+	}
+.recent ul{
+	margin-left:70px;
+	}
+.recent a{
+	display:block;
+	padding:10px 21px 11px 21px;
+	
+	color:#696969;
+	}
+.recent a:hover{
+   color:white;
+   background-color:#f04949;
+   }
+ .recent .pic{
+	 padding:48px 0 108px;
+	 text-align:center;
+	 }
+.recent .box h6{
+	font-size:15px;
+	font-weight:bold;
+	line-height:34px;
+	}
+.recent .box{
+	background-color:#ebebeb;
+	border-radius:5px;
+	}	 
+.box_pic img{
+	width:94%;
+	margin-top:5px;
+	}
+.box:hover{
+	background-color:#f04949;
+	color:white;
+	}
+.mypic{
+	padding:0;
+	}
+.welcome{
+	
+	background-image: url(../images/%E5%9B%BE%E5%B1%82%20110.png);
+	background-attachment:fixed;
+	background-size:cover;
+	text-align:center;
+	color:white;
+	}
+.bj_atta{
+	background-color:#283036;
+	padding:60px 0 87px;
+	opacity:0.7
+	}
+.bj_atta h3{
+	line-height:78px;
+	font-size:48px;
+	}
+.bj_atta p{
+	line-height:24px;
+	}
+.bj_atta a{
+	padding:22px 50px 22px;
+	border:2px white solid;
+	border-radius:8px;
+	font-size:24px;
+	color:white;
+	display:inline-block;
+	margin-top:33px;
+	}
+.btn:hover{
+		color:white;
+		}
+.code{
+	padding:110px 0 74px;
+	}
+.code_icon{
+	float:left;
+	}
+.code_tit{
+	float:right;
+	
+	width:80%;
+	}
+.code_tit h4{
+	color:#f04949;
+	line-height:34px;
+	font-size:18px;
+	}
+.code_tit p{
+	line-height:20px;
+	}
+.new h4{
+	font-size:24px;
+	line-height:19px;
+	height:19px;
+	}
+.new_mid{
+	padding-top:40px;
+	}
+.new_tit{
+	float:left;
+	width:50%;
+	margin-left:18px;
+	}
+.new_pic{
+	float:left;
+	}
+.new_tit h5{
+	line-height:25px;
+	padding-bottom:15px;
+	font-size:18px;
+	}
+.new_tit p{
+	color:#939393;
+	}
+.bj_h5 h5{
+	background-color:#f04949;
+	line-height:40px;
+	font-size:14px;
+	color:white;
+	}
+.service{
+	padding-bottom:40px;
+	}
+.bj_h5t h5{
+	background-color:#d3d3d3;
+	line-height:40px;
+	font-size:14px;
+	margin-top:10px;
+	}
+.lorem p{
+	line-height:19px;
+	padding-top:11px;
+	}
+.team{
+	text-align:center;
+	padding:23px 0 60px;
+	background-color:#f04949;
+	}
+.team .team_men{
+	padding:0;
+	}
+.team h4{
+	font-size:30px;
+	line-height:72px;
+	}
+.team p{
+	line-height:19px;
+	}
+.team_pic {
+	margin:48px 0 33px;
+	}
+.team h5{
+	font-size:25px;
+	}
+footer{
+	height:324px;
+	background-color:#283036;
+	text-align:center;
+	}
+footer img{
+	margin:76px 0 51px;
+	}
+footer p{
+	color:white;
+	line-height:29px;
+	font-size:12px;
+	}
+.backtop{
+	position:fixed;
+	right:92px;
+	bottom:27px;
+	}
+@media screen and(max-width:980px){
+	}
